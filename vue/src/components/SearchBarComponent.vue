@@ -117,7 +117,7 @@ export default {
         if (response.status === 200) {
           var relativeImagePath = response.data;
         // Construct absolute image URL by appending relative path to base URL
-        this.imgPath = `https://wyrmspandragons.netlify.app/${relativeImagePath}`;
+        this.imgPath = `${relativeImagePath}`;
           // this.imgPath = "../../";
           // this.imgPath += response.data;
         }
