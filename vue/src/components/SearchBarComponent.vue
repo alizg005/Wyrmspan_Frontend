@@ -67,7 +67,7 @@ export default {
       activeIndex: -1,
       showInfo: false,
       DisplayDragon: [],
-      imgPath: "/"
+      imgPath: ""
     };
   },
   methods: {
@@ -115,7 +115,8 @@ export default {
       DragonService.getDragonImgPath(dragon_number)
       .then(response => {
         if (response.status === 200) {
-          this.imgPath = this.imgPath + response.data;
+          this.imgPath = "/";
+          this.imgPath += response.data;
         }
       })
     }
