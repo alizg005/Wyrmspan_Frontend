@@ -115,7 +115,7 @@ export default {
       DragonService.getDragonImgPath(dragon_number)
       .then(response => {
         if (response.status === 200) {
-          const relativeImagePath = response.data;
+          var relativeImagePath = response.data;
         // Construct absolute image URL by appending relative path to base URL
         this.imgPath = `https://wyrmspandragons.netlify.app/${relativeImagePath}`;
           // this.imgPath = "../../";
