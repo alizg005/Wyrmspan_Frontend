@@ -3,7 +3,7 @@
         <div class="box">
 
             <div class="image-section">
-                <img class="dragon-image" :src="this.imgPath" v-if="imgPath != ''">
+                <img class="dragon-image" :src="getImageUrl()" alt="Dragon Image">
             </div>
             <div class="content">
                 <div class="name">
@@ -59,6 +59,18 @@ export default {
         imgPath: {
             type: String
         }
+    },
+    methods: {
+        getImageUrl() {
+        // Check if imgPath is not empty
+        if (this.imgPath) {
+            // Construct the full image URL by concatenating imgPath with the filename
+            return require(`@/img/DragonPics/${this.imgPath}`);
+        } else {
+            // Return a placeholder image or handle empty case
+            return ''; // or return path to a placeholder image
+        }
+      }
     }
 }
 </script>
