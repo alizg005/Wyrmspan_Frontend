@@ -115,7 +115,7 @@ export default {
       DragonService.getDragonImgPath(dragon_number)
       .then(response => {
         if (response.status === 200) {
-          this.imgPath = "/";
+          this.imgPath = "../../";
           this.imgPath += response.data;
         }
       })
