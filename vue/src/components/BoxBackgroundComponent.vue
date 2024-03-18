@@ -60,18 +60,6 @@ export default {
             type: String
         }
     },
-    methods: {
-        getImageUrl() {
-        // Check if imgPath is not empty
-        if (this.imgPath) {
-            // Construct the full image URL by concatenating imgPath with the filename
-            return require(`@/img/DragonPics/${this.imgPath}`);
-        } else {
-            // Return a placeholder image or handle empty case
-            return ''; // or return path to a placeholder image
-        }
-      }
-    }
 }
 </script>
 
