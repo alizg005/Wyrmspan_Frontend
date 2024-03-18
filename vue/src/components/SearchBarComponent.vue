@@ -67,7 +67,7 @@ export default {
       activeIndex: -1,
       showInfo: false,
       DisplayDragon: [],
-      imgPath: ""
+      imgPath: "/"
     };
   },
   methods: {
