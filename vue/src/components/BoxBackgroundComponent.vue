@@ -3,7 +3,7 @@
         <div class="box">
 
             <div class="image-section">
-                <img class="dragon-image" :src="getImageUrl()" alt="Dragon Image">
+                <img class="dragon-image" :src="this.imgPath" v-if="imgPath != ''">
             </div>
             <div class="content">
                 <div class="name">
@@ -59,7 +59,7 @@ export default {
         imgPath: {
             type: String
         }
-    },
+    }
 }
 </script>
 
