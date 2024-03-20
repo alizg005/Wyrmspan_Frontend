@@ -2,10 +2,10 @@
     <div class="container">
         <div class="box">
 
-            <div class="dragon-image">
+            <!-- <div class="image-section"> -->
                 <!-- <img class="dragon-image" :src="this.imgPath" v-if="imgPath != ''"> -->
-                <div class="image-section" v-html="dragonImgHTML"></div>
-            </div>
+                <div class="dragon-image"  v-html="dragonImgHTML" style="height: 250px;"></div>
+            <!-- </div> -->
 
             <div class="content">
                 <div class="name">
@@ -91,7 +91,7 @@ export default {
 
 .dragon-image {
     width: 100%;
-    height: 250px;
+    height: 150px;
     max-width: 100%;
     max-height: 100%;
     box-shadow: 20px 20px 50px rgba(137, 137, 137, 0.684);
