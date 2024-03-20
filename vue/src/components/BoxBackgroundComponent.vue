@@ -1,6 +1,6 @@
 <template>
-    <!-- <div class="container">
-        <div class="box">
+    <div class="container">
+        <div class="box" v-if="search !== '' || dragonProp">
 
             <div class="image-section">
                 <div class="dragon-image" v-html="dragonImgHTML"></div>
@@ -17,33 +17,10 @@
                     <text-component :dragonDescription="dragonProp.description"></text-component>
                 </div>
             </div>
+        </div>
 
-        </div> -->
-
-        <div class="container">
-        <div class="box">
-
-            <div class="image-section" v-if="search !== '' || dragonProp">
-                <!-- <img class="dragon-image" :src="this.imgPath" v-if="imgPath != ''"> -->
-                <div class="dragon-image" v-html="dragonImgHTML"></div>
-            </div>
-
-            <div class="content" v-if="search !== '' || dragonProp">
-                <div class="name">
-                    <h1>{{ dragonProp.name }}</h1>
-                </div>
-                <div class="stats" v-if="search !== '' || dragonProp">
-                    <dragon-stats-component :dragonProp="dragonProp"></dragon-stats-component>
-                </div>
-                <div class="description"  v-if="search !== '' || dragonProp">
-                    <text-component :dragonDescription="dragonProp.description"></text-component>
-                </div>
-            </div>
-
-            <div class="message" v-else>
-                <p>Type dragon name in searchbar to see stats.</p>
-            </div>
-
+        <div class="message" v-else>
+            <p>Type dragon name in searchbar to see stats.</p>
         </div>
     </div>
 
@@ -72,7 +49,7 @@ export default {
         }
     },
     computed: {
-        
+
         dragonImgHTML() {
             if (this.imgPath) {
                 return `<div class="dragon-image">${this.imgPath}</div>`;
@@ -85,11 +62,11 @@ export default {
 </script>
 
 <style>
-
 img {
     height: 450px;
     max-width: 100%;
 }
+
 .container {
     display: flex;
     justify-content: center;
@@ -132,12 +109,19 @@ img {
     justify-content: flex-end;
 }
 
+.message {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
 @media screen and (max-width: 900px) {
 
     img {
-    height: 450px;
-    max-width: 100%;
-}
+        height: 450px;
+        max-width: 100%;
+    }
 
     .box {
         flex-direction: column;
