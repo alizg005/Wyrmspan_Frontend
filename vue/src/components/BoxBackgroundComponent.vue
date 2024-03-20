@@ -3,10 +3,8 @@
         <div class="box">
 
             <div class="image-section">
-                <!-- <img class="dragon-image" :src="this.imgPath" v-if="imgPath != ''"> -->
-                <div class="image-section" v-html="dragonImgHTML"></div>
+                <img class="dragon-image" :src="imgPath" :alt="dragonProp.name" style="height: 250px;" v-if="imgPath">
             </div>
-
             <div class="content">
                 <div class="name">
                     <h1>{{ dragonProp.name }}</h1>
@@ -44,15 +42,7 @@ export default {
 
         }
     },
-    computed: {
-        dragonImgHTML() {
-            if (this.imgPath) {
-                return `<img class="dragon-image" src="${this.imgPath}" alt="${this.dragonProp.name}" style="height: 250px;">`;
-            } else {
-                return '';
-            }
-        }
-    }
+   
 }
 </script>
 
