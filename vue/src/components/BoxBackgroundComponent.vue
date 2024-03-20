@@ -142,6 +142,7 @@ img {
     .name {
         display: flex;
         justify-content: center;
+        margin-top: 35%;
     }
 }
 </style>
