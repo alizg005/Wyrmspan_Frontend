@@ -2,7 +2,7 @@
     <div class="container">
         <div class="box">
 
-            <div class="image-section">
+            <div class="dragon-image">
                 <!-- <img class="dragon-image" :src="this.imgPath" v-if="imgPath != ''"> -->
                 <div class="image-section" v-html="dragonImgHTML"></div>
             </div>
