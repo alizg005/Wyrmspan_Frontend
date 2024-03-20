@@ -58,6 +58,11 @@ export default {
 </script>
 
 <style>
+
+img {
+    height: 450px;
+    max-width: 100%;
+}
 .container {
     display: flex;
     justify-content: center;
@@ -104,6 +109,12 @@ export default {
 }
 
 @media screen and (max-width: 900px) {
+
+    img {
+    height: 450px;
+    max-width: 100%;
+}
+
     .box {
         flex-direction: column;
         height: auto;
