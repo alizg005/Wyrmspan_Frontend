@@ -4,7 +4,7 @@
 
             <div class="image-section">
                 <!-- <img class="dragon-image" :src="this.imgPath" v-if="imgPath != ''"> -->
-                <div v-html="dragonImgHTML" style="height: 250px;"></div>
+                <div v-html="dragonImgHTML" style="height: 50px;"></div>
             </div>
 
             <div class="content">
