@@ -45,7 +45,6 @@ export default {
         }
     },
     computed: {
-        
         dragonImgHTML() {
             if (this.imgPath) {
                 return `<div class="dragon-image">${this.imgPath}</div>`;
@@ -92,7 +91,7 @@ export default {
 
 .dragon-image {
     width: 100%;
-    height: auto;
+    height: 250px;
     max-width: 100%;
     max-height: 100%;
     box-shadow: 20px 20px 50px rgba(137, 137, 137, 0.684);
