@@ -32,10 +32,10 @@
                 <div class="name">
                     <h1>{{ dragonProp.name }}</h1>
                 </div>
-                <div class="stats">
+                <div class="stats" v-if="search !== '' || dragonProp">
                     <dragon-stats-component :dragonProp="dragonProp"></dragon-stats-component>
                 </div>
-                <div class="description">
+                <div class="description"  v-if="search !== '' || dragonProp">
                     <text-component :dragonDescription="dragonProp.description"></text-component>
                 </div>
             </div>
