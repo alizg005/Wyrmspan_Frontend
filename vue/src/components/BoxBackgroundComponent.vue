@@ -72,7 +72,7 @@ export default {
 
 .image-section {
     margin-right: 10%;
-    height: 250px;
+    height: 50%;
     display: flex;
     align-items: center;
 
@@ -136,41 +136,4 @@ export default {
         justify-content: center;
     }
 }
-
-/* .container {
-    display: flex;
-    justify-content: center;
-}
-
-.dragon-image {
-    height: 500px; */
-/* width: 250px; */
-/* box-shadow: 20px 20px 50px rgba(137, 137, 137, 0.684);
-} */
-
-/* .image-section { */
-/* height: fit-content; */
-/* margin-left: 10%;
-} */
-
-/* .box {
-    width: 80%;
-    display: flex;
-    flex-direction: row;
-}
-
-.name {
-    display: flex;
-    justify-content: right;
-}
-
-
-.content {
-    display: flex;
-    flex-direction: column;
-    height: 500px;
-}
-.description{
-    height: 550px; 
-} */
 </style>
