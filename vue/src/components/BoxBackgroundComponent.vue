@@ -2,18 +2,18 @@
     <div class="container">
         <div class="box" v-if="search !== '' || dragonProp">
 
-            <div class="image-section">
+            <div class="image-section" v-if="dragonProp">
                 <div class="dragon-image" v-html="dragonImgHTML"></div>
             </div>
 
-            <div class="content">
+            <div class="content" v-if="dragonProp">
                 <div class="name">
                     <h1>{{ dragonProp.name }}</h1>
                 </div>
-                <div class="stats">
+                <div class="stats" v-if="dragonProp">
                     <dragon-stats-component :dragonProp="dragonProp"></dragon-stats-component>
                 </div>
-                <div class="description">
+                <div class="description" v-if="dragonProp">
                     <text-component :dragonDescription="dragonProp.description"></text-component>
                 </div>
             </div>
