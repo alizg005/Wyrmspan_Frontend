@@ -47,7 +47,7 @@ export default {
     computed: {
         dragonImgHTML() {
             if (this.imgPath) {
-                return `<div class="dragon-image">${this.imgPath}</div>`;
+                return `<img class="dragon-image" src="${this.imgPath}" alt="${this.dragonProp.name}" style="height: 250px;">`;
             } else {
                 return '';
             }
@@ -71,7 +71,7 @@ export default {
 
 .image-section {
     margin-right: 10%;
-    max-height: 250px;
+    height: 250px;
     display: flex;
     align-items: center;
 
