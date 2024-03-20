@@ -115,11 +115,7 @@ export default {
       DragonService.getDragonImgPath(dragon_number)
       .then(response => {
         if (response.status === 200) {
-          var relativeImagePath = response.data;
-        // Construct absolute image URL by appending relative path to base URL
-        this.imgPath = `${relativeImagePath}`;
-          // this.imgPath = "../../";
-          // this.imgPath += response.data;
+          this.imgPath = response.data;
         }
       })
     }
@@ -132,7 +128,6 @@ export default {
       );
     },
   },
-
 }
 </script>
 
