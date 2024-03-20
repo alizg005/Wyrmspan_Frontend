@@ -47,7 +47,7 @@ export default {
     computed: {
         dragonImgHTML() {
             if (this.imgPath) {
-                return `<div class="dragon-image">${this.imgPath} style="height: 250px; </div>`;
+                return `<div class="dragon-image">${this.imgPath} style="height: 250px;"</div>`;
             } else {
                 return '';
             }
