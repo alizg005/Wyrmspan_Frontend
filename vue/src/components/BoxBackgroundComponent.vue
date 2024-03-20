@@ -4,7 +4,7 @@
 
             <div class="image-section">
                 <!-- <img class="dragon-image" :src="this.imgPath" v-if="imgPath != ''"> -->
-                <div v-html="dragonImgHTML" style="height: 50px;"></div>
+                <div v-html="dragonImgHTML" style="height: 250px;"></div>
             </div>
 
             <div class="content">
@@ -71,7 +71,7 @@ export default {
 
 .image-section {
     margin-right: 10%;
-    height: 250px;
+    max-height: 250px;
     display: flex;
     align-items: center;
 
