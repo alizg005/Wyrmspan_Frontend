@@ -1,8 +1,9 @@
 <template>
-    <div class="container">
-        <div class="box" v-if="search !== '' || dragonProp">
+<div class="container">
+        <div class="box">
 
             <div class="image-section" v-if="dragonProp">
+           
                 <div class="dragon-image" v-html="dragonImgHTML"></div>
             </div>
 
@@ -10,21 +11,19 @@
                 <div class="name">
                     <h1>{{ dragonProp.name }}</h1>
                 </div>
-                <div class="stats" v-if="dragonProp">
+                <div class="stats">
                     <dragon-stats-component :dragonProp="dragonProp"></dragon-stats-component>
                 </div>
-                <div class="description" v-if="dragonProp">
+                <div class="description">
                     <text-component :dragonDescription="dragonProp.description"></text-component>
                 </div>
             </div>
-        </div>
-
-        <div class="message" v-else>
-            <p>Type dragon name in searchbar to see stats.</p>
+            
+            <div class="message" v-else>
+                <p>Type dragon name in searchbar to see stats.</p>
+            </div>
         </div>
     </div>
-
-
 </template>
 
 <script>
