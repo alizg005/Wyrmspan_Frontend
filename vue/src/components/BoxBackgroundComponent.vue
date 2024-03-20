@@ -4,7 +4,7 @@
 
             <div class="image-section">
                 <!-- <img class="dragon-image" :src="this.imgPath" v-if="imgPath != ''"> -->
-                <div v-html="dragonImgHTML" style="height: 250px;"></div>
+                <div class="dragon-image" v-html="dragonImgHTML" style="height: 250px;"></div>
             </div>
 
             <div class="content">
@@ -47,7 +47,7 @@ export default {
     computed: {
         dragonImgHTML() {
             if (this.imgPath) {
-                return `<div class="dragon-image">${this.imgPath} style="height: 250px;"</div>`;
+                return `<div class="dragon-image">${this.imgPath} </div>`;
             } else {
                 return '';
             }
