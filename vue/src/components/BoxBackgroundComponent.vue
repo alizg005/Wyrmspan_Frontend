@@ -72,7 +72,7 @@ export default {
 
 .image-section {
     margin-right: 10%;
-    height: 450px;
+    height: 250px;
     display: flex;
     align-items: center;
 
