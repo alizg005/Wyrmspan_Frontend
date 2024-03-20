@@ -1,10 +1,12 @@
 <template>
-       <div class="container">
+    <div class="container">
         <div class="box">
 
             <div class="image-section">
-                <img class="dragon-image" :src="this.imgPath" v-if="imgPath != ''">
+                <!-- <img class="dragon-image" :src="this.imgPath" v-if="imgPath != ''"> -->
+                <div v-html="dragonImgHTML"></div>
             </div>
+
             <div class="content">
                 <div class="name">
                     <h1>{{ dragonProp.name }}</h1>
@@ -16,29 +18,9 @@
                     <text-component :dragonDescription="dragonProp.description"></text-component>
                 </div>
             </div>
-            
+
         </div>
     </div>
-    <!-- <div class="container">
-        <div class="box">
-
-            <div class="image-section">
-                <img class="dragon-image" :src="this.imgPath" v-if="imgPath != ''">
-            </div>
-            <div class="content">
-                <div class="name">
-                    <h1>{{ dragonProp.name }}</h1>
-                </div>
-                <div class="stats">
-                    <dragon-stats-component :dragonProp="dragonProp"></dragon-stats-component>
-                </div>
-                <div class="description">
-                    <text-component :dragonDescription="dragonProp.description"></text-component>
-                </div>
-            </div>
-            
-        </div>
-    </div> -->
 </template>
 
 <script>
@@ -57,14 +39,25 @@ export default {
             type: []
         },
         imgPath: {
-            type: String
+            type: String,
+            required: true,
+
+        }
+    },
+    computed: {
+        
+        dragonImgHTML() {
+            if (this.imgPath) {
+                return `<div class="dragon-image">${this.imgPath}</div>`;
+            } else {
+                return '';
+            }
         }
     }
 }
 </script>
 
 <style>
-
 .container {
     display: flex;
     justify-content: center;
@@ -79,31 +72,32 @@ export default {
 
 .image-section {
     margin-right: 10%;
-    height: 450px; 
+    height: 450px;
     display: flex;
-    align-items: center; 
+    align-items: center;
 
 }
 
 .content {
-    flex: 1; 
+    flex: 1;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; 
+    justify-content: space-between;
     height: 450px;
 }
 
 .description {
-    overflow-y: auto; 
+    overflow-y: auto;
 }
 
 .dragon-image {
-    width: auto; 
-    height: 100%; 
-    max-width: 100%; 
+    width: auto;
+    height: 100%;
+    max-width: 100%;
     max-height: 100%;
     box-shadow: 20px 20px 50px rgba(137, 137, 137, 0.684);
 }
+
 .name {
     display: flex;
     justify-content: flex-end;
@@ -116,27 +110,31 @@ export default {
     }
 
     .image-section {
-        width: 100%; 
-        height: 250px; 
+        width: 100%;
+        height: 250px;
         justify-content: center;
         margin-bottom: 8%;
     }
+
     .description {
-    margin-top: 5%; 
-    justify-content: center;
-}
-.content{
-    display: flex;
-    justify-content: center;
-}
-.stats{
-    display: flex;
-    justify-content: center;
-}
-.name{
-    display: flex;
-    justify-content: center;
-}
+        margin-top: 5%;
+        justify-content: center;
+    }
+
+    .content {
+        display: flex;
+        justify-content: center;
+    }
+
+    .stats {
+        display: flex;
+        justify-content: center;
+    }
+
+    .name {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 /* .container {
@@ -146,13 +144,13 @@ export default {
 
 .dragon-image {
     height: 500px; */
-    /* width: 250px; */
-    /* box-shadow: 20px 20px 50px rgba(137, 137, 137, 0.684);
+/* width: 250px; */
+/* box-shadow: 20px 20px 50px rgba(137, 137, 137, 0.684);
 } */
 
 /* .image-section { */
-    /* height: fit-content; */
-    /* margin-left: 10%;
+/* height: fit-content; */
+/* margin-left: 10%;
 } */
 
 /* .box {

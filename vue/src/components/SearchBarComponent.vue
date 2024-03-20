@@ -26,22 +26,9 @@
       <a @click="showDragonInfo(dragon)">{{ dragon.name }}</a>
     </li>
   </ul>
-  <!-- <div class="info" v-if="showInfo">
-    {{ DisplayDragon.name }}
-  </div> -->
-  <!-- <div>
-        <input v-model="Search" @input="onInput" @keydown.down="onArrowDown" @keydown.up="onArrowUp"
-            @keydown.enter="onEnter" />
-        <ul v-if="showDragons">
-            <li v-for="(dragon, index) in filteredDragons" :key="index" @click="selectDragon(index)"
-                :class="{ active: index === activeIndex }">
-                {{ dragon }}
-            </li>
-        </ul>
-  
-    </div> -->
+ 
     <BoxBackgroundComponent :dragonProp="DisplayDragon" :imgPath="imgPath"/>
-    <!-- <textComponent :dragonDescription="DisplayDragon.description" /> -->
+
 
     
     
