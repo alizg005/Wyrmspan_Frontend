@@ -2,26 +2,23 @@
 <div class="container">
         <div class="box">
 
-            <div class="image-section" v-if="dragonProp">
-           
+            <div class="image-section">
                 <div class="dragon-image" v-html="dragonImgHTML"></div>
             </div>
 
-            <div class="content" v-if="dragonProp">
+            <div class="content">
                 <div class="name">
                     <h1>{{ dragonProp.name }}</h1>
                 </div>
+
                 <div class="stats">
                     <dragon-stats-component :dragonProp="dragonProp"></dragon-stats-component>
                 </div>
+
                 <div class="description">
                     <text-component :dragonDescription="dragonProp.description"></text-component>
                 </div>
-            </div>
-            
-            <div class="message" v-else>
-                <p>Type dragon name in searchbar to see stats.</p>
-            </div>
+            </div>     
         </div>
     </div>
 </template>

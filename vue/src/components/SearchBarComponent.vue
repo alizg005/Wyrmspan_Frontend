@@ -1,6 +1,5 @@
 <template>
   <nav class="level ">
-    <!-- Left side -->
     <div class="level-left">
       <div class="level-item">
       </div>
@@ -44,7 +43,6 @@ export default {
 
   components: {
     BoxBackgroundComponent,
-    // textComponent
   },
   data() {
     return {
@@ -84,7 +82,7 @@ export default {
     },
     selectDragon(index) {
       this.Search = this.Dragons[index];
-      // this.showDragons = false;
+
     },
     showDragonInfo(dragon) {
       DragonService.getDragonByName(dragon.name)
@@ -148,7 +146,6 @@ input {
   top: 17%; 
   margin-left: 31.5%; 
   z-index: 1;
-  /* border-radius: 2%; */
   box-shadow: 10px 10px 50px rgb(222, 222, 222);
 }
 
@@ -182,7 +179,6 @@ input {
   top: 9%; 
   margin-left: 10%; 
   z-index: 1;
-  /* border-radius: 2%; */
   box-shadow: 10px 10px 50px rgb(222, 222, 222);
 }
 .level-item .field .control input {
