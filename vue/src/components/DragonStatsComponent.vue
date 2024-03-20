@@ -1,5 +1,5 @@
 <template>
-    <div class="stats-line">
+    <div v-if="dragonProp" class="stats-line">
         <div class="line">
             <p class="dragon-stat"><span class="stat">HABITAT:</span> {{ dragonProp.habitat }}  </p>
             <p class="dragon-stat"><span class="stat">SIZE:</span> {{ dragonProp.size }}</p>
