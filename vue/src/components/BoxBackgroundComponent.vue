@@ -1,11 +1,11 @@
 <template>
     <div class="container">
         <div class="box">
-<!-- 
-            <div class="image-section"> -->
+
+            <div class="image-section">
                 <!-- <img class="dragon-image" :src="this.imgPath" v-if="imgPath != ''"> -->
-                <div class="dragon-image" v-html="dragonImgHTML"></div>
-            <!-- </div> -->
+                <div class="image-section" v-html="dragonImgHTML"></div>
+            </div>
 
             <div class="content">
                 <div class="name">
