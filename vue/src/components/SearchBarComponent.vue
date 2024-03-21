@@ -147,7 +147,7 @@ input {
   margin-left: 31.5%; 
   z-index: 1;
   box-shadow: 10px 10px 50px rgb(222, 222, 222);
-  margin-top: 4%;
+  margin-top: 2%;
 }
 
 
@@ -181,6 +181,7 @@ input {
   margin-left: 10%; 
   z-index: 1;
   box-shadow: 10px 10px 50px rgb(222, 222, 222);
+  margin-top: 4%;
 }
 .level-item .field .control input {
     width: 250px !important;
