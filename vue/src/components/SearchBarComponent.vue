@@ -38,13 +38,6 @@ import SearchService from '../services/SearchService';
 import DragonService from '../services/DragonService.js';
 import BoxBackgroundComponent from './BoxBackgroundComponent.vue';
 
-const debounce = (func, delay) => {
-  let timeoutId;
-  return (...args) => {
-    clearTimeout(timeoutId);
-    timeoutId = setTimeout(() => func.apply(this, args), delay);
-  };
-};
 
 export default {
 
@@ -64,30 +57,14 @@ export default {
     };
   },
   methods: {
-    sendSearch: debounce(async function() {
-      if (this.Search in this.dragonCache) {
-        this.Dragons = this.dragonCache[this.Search];
-      } else {
-        try {
-          const response = await SearchService.searchDragon(this.Search);
-          this.Dragons = response.data;
-          this.dragonCache[this.Search] = response.data; // Cache the response
-        } catch (error) {
-          console.error(error);
-          // Handle error (e.g., show error message to the user)
-        }
-      }
+    sendSearch() {
+      SearchService.searchDragon(this.Search)
+        .then(response => this.Dragons = response.data)
+        .catch(error => console.error(error));
+
       this.showDragons = true;
       this.activeIndex = -1;
-    }, 300), // Adjust the delay as needed (e.g., 300 milliseconds)
-    // sendSearch() {
-    //   SearchService.searchDragon(this.Search)
-    //     .then(response => this.Dragons = response.data)
-    //     .catch(error => console.error(error));
-
-    //   this.showDragons = true;
-    //   this.activeIndex = -1;
-    // },
+    },
     onArrowDown() {
       if (this.activeIndex < this.filteredDragons.length - 1) {
         this.activeIndex++;
