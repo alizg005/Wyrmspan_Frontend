@@ -12,7 +12,7 @@
 
                 <!-- Loading spinner -->
                 <div class="loading-spinner">
-                    <img src="../img/spinner.gif" alt="Loading Spinner">
+                    <img src="/img/spinner.gif" alt="Loading Spinner">
                     <p>Loading...</p>
                 </div>
             </div>
