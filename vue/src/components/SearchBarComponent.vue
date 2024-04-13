@@ -155,14 +155,19 @@ export default {
 
 
 <style>
+.relative-position {
+  position: relative;
+}
+
 .loading-spinner {
-  display: flex;
-  align-items: center;
+  position: absolute;
+  top: 50%;
+  right: 10px; /* Adjust the distance from the right edge of the input */
+  transform: translateY(-50%);
 }
 
 .loading-spinner img {
-  margin-right: 10px;
-  height: 30px; /* Adjust the height of the spinner image as needed */
+  height: 30px; /* Adjust the size of the spinner image */
 }
 .level {
   display: flex;
