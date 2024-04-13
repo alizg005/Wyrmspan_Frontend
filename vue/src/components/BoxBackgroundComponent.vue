@@ -1,6 +1,25 @@
 <template>
-    <div class="container">
-        <div class="box" id="empty-box" v-if="dragonProp.length < 1">
+     <div class="container">
+        <div class="box" id="empty-box" v-if="dragonProp.length < 1 && !imgPath">
+            <div class="welcome-text">
+                <div class="welcome-text">
+                    <h1 class="welcome-header">Welcome to the Wyrmspan Dragon App!</h1>
+                    <p class="welcome-p">Please enter a dragon name in the search bar to see stats</p>
+                    <span class="note">
+                        <p class="welcome-p">*NOTE: Data may take some time to load!</p>
+                    </span>
+                </div>
+
+                <!-- Loading spinner -->
+                <div class="loading-spinner">
+                    <img src="../img/spinner.gif" alt="Loading Spinner">
+                    <p>Loading...</p>
+                </div>
+            </div>
+        </div>
+
+    <!-- <div class="container">
+        <div class="box" id="empty-box" v-if="dragonProp.length < 1" && !imgPath>
             <div class="welcome-text">
                 <h1 class="welcome-header">Welcome to the Wyrmspan Dragon App!</h1>
                 <p class="welcome-p">Please enter a dragon name in the search bar to see stats</p>
@@ -8,7 +27,7 @@
                     <p class="welcome-p">*NOTE: Data may take some time to load!</p>
                 </span>
             </div>
-        </div>
+        </div> -->
 
         <div class="box" v-else>
             <div class="image-section">
