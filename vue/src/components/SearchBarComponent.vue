@@ -62,13 +62,19 @@ export default {
   },
   methods: {
     sendSearch() {
-      SearchService.searchDragon(this.Search)
-        .then(response => this.Dragons = response.data)
-        .catch(error => console.error(error));
+  this.loading = true; // Set loading to true before making the search request
+
+  SearchService.searchDragon(this.Search)
+    .then(response => {
+      this.Dragons = response.data;
       this.showDragons = true;
       this.activeIndex = -1;
-      this.loading = false;   
-    },
+    })
+    .catch(error => console.error(error))
+    .finally(() => {
+      this.loading = false; // Set loading to false after the search operation is completed
+    });
+  },
     onArrowDown() {
       if (this.activeIndex < this.filteredDragons.length - 1) {
         this.activeIndex++;
