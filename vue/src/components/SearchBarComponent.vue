@@ -9,6 +9,9 @@
             <input class="input" type="text" placeholder="Find a dragon by its name" style="width: 500px;"
               v-model="Search" @input="sendSearch()">
           </p>
+          <p class="control loading-spinner" v-if="loading">
+            <img src="/img/spinner.gif" alt="Loading Spinner">
+          </p>
           <p class="control">
             <button class="button" @click="sendSearch">
               Search
@@ -18,10 +21,10 @@
       </div>
     </div>
   </nav>
-  <div class="loading-spinner" v-if="loading">
+  <!-- <div class="loading-spinner" v-if="loading">
     <img src="/img/spinner.gif" alt="Loading Spinner">
     <h1>Loading...</h1>
-  </div>
+  </div> -->
 
   <ul class="listDragons" v-if="showDragons">
     <li v-for="(dragon, index) in Dragons" :key="index"
@@ -129,8 +132,14 @@ export default {
 
 
 <style>
-.loading-spinner{
-  max-width: 30%;
+.loading-spinner {
+  display: flex;
+  align-items: center;
+}
+
+.loading-spinner img {
+  margin-right: 10px;
+  height: 30px; /* Adjust the height of the spinner image as needed */
 }
 .level {
   display: flex;
