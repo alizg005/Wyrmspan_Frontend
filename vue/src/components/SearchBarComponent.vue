@@ -1,5 +1,28 @@
 <template>
-  <nav class="level ">
+    <nav class="level">
+    <div class="level-left">
+      <div class="level-item">
+      </div>
+      <div class="level-item">
+        <div class="field has-addons">
+          <div class="control relative-position">
+            <input class="input" type="text" placeholder="Find a dragon by its name" style="width: 500px;"
+              v-model="Search" @input="sendSearch()">
+            <!-- Loading spinner inside the search input -->
+            <div class="loading-spinner" v-if="loading">
+              <img src="/img/spinner.gif" alt="Loading Spinner">
+            </div>
+          </div>
+          <p class="control">
+            <button class="button" @click="sendSearch">
+              Search
+            </button>
+          </p>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- <nav class="level ">
     <div class="level-left">
       <div class="level-item">
       </div>
@@ -20,7 +43,7 @@
         </div>
       </div>
     </div>
-  </nav>
+  </nav> -->
   <!-- <div class="loading-spinner" v-if="loading">
     <img src="/img/spinner.gif" alt="Loading Spinner">
     <h1>Loading...</h1>
