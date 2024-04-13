@@ -163,7 +163,7 @@ export default {
   position: absolute;
   right: 10px; 
   top: 50%;
-  transform: translateY(-50%);
+  /* transform: translateY(-50%); */
 }
 
 .loading-spinner img {
