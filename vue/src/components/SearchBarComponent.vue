@@ -16,9 +16,13 @@
           </p>
         </div>
       </div>
-
     </div>
   </nav>
+  <div class="loading-spinner" v-if="loading">
+    <img src="/img/spinner.gif" alt="Loading Spinner">
+    <h1>Loading...</h1>
+  </div>
+
   <ul class="listDragons" v-if="showDragons">
     <li v-for="(dragon, index) in Dragons" :key="index"
       :class="{ active: index === activeIndex }">
@@ -53,7 +57,7 @@ export default {
       showInfo: false,
       DisplayDragon: [],
       imgPath: "",
-      dragonCache: {},
+      loading: false,
     };
   },
   methods: {
@@ -61,9 +65,9 @@ export default {
       SearchService.searchDragon(this.Search)
         .then(response => this.Dragons = response.data)
         .catch(error => console.error(error));
-
       this.showDragons = true;
       this.activeIndex = -1;
+      this.loading = false;   
     },
     onArrowDown() {
       if (this.activeIndex < this.filteredDragons.length - 1) {
@@ -119,6 +123,9 @@ export default {
 
 
 <style>
+.loading-spinner{
+  max-width: 30%;
+}
 .level {
   display: flex;
   align-items: center;
