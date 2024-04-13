@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <div class="box" id="empty-box" v-if="dragonProp.length < 1" && !imgPath>
+        <div class="box" id="empty-box" v-if="dragonProp.length < 1">
             <div class="welcome-text">
                 <h1 class="welcome-header">Welcome to the Wyrmspan Dragon App!</h1>
                 <p class="welcome-p">Please enter a dragon name in the search bar to see stats</p>
