@@ -161,13 +161,11 @@ export default {
 
 .loading-spinner {
   position: absolute;
-  top: 50%;
-  right: 10px; /* Adjust the distance from the right edge of the input */
-  transform: translateY(-50%);
+  right: 10px; 
 }
 
 .loading-spinner img {
-  height: 30px; /* Adjust the size of the spinner image */
+  height: 30px; 
 }
 .level {
   display: flex;
